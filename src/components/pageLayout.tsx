@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Footer from './footer';
 import Header from './header';
-import styles from '/styles/Home.module.css';
+import styles from '/src/styles/PageLayout.module.css';
 
 type Props = {
   children?: React.ReactNode;

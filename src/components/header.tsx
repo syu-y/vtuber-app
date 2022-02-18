@@ -2,8 +2,13 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '/styles/Home.module.css';
-import { APP_NAME, SITE_TITLE } from '../app.const';
+import styles from '/src/styles/Header.module.css';
+import {
+  APP_NAME,
+  SITE_TITLE,
+  HEADER_ICON_HEIGHT,
+  HEADER_ICON_WIDTH,
+} from '../app.const';
 
 const Header: NextPage = () => {
   return (
@@ -24,16 +29,16 @@ const Header: NextPage = () => {
           content="width=device-width, initial-scale=1"
         ></meta>
       </Head>
-      <header className={styles.header}>
+      <div className={styles.header}>
         <Image
           priority
           src="/images/media-small-icon.svg"
-          height={72}
-          width={72}
+          height={HEADER_ICON_HEIGHT}
+          width={HEADER_ICON_WIDTH}
           alt={APP_NAME}
         />
         <h1 className={styles.headerText}>{APP_NAME}</h1>
-      </header>
+      </div>
     </>
   );
 };
