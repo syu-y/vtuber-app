@@ -11,7 +11,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <VtuberContextProvider>
       <PageLayout>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </PageLayout>
     </VtuberContextProvider>
   );
