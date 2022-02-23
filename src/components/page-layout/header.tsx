@@ -8,9 +8,9 @@ import {
   SITE_TITLE,
   HEADER_ICON_HEIGHT,
   HEADER_ICON_WIDTH,
-} from '../app.const';
+} from '../../app.const';
 
-const Header: NextPage = () => {
+const Header = () => {
   return (
     <>
       <Head>
@@ -29,7 +29,7 @@ const Header: NextPage = () => {
           content="width=device-width, initial-scale=1"
         ></meta>
       </Head>
-      <div className={styles.header}>
+      <header className={styles.header}>
         <Image
           priority
           src="/images/media-small-icon.svg"
@@ -37,8 +37,10 @@ const Header: NextPage = () => {
           width={HEADER_ICON_WIDTH}
           alt={APP_NAME}
         />
-        <h1 className={styles.headerText}>{APP_NAME}</h1>
-      </div>
+        <h1 className={styles.headerText}>
+          <Link href="/">{APP_NAME}</Link>
+        </h1>
+      </header>
     </>
   );
 };
