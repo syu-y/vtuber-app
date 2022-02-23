@@ -1,8 +1,20 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { NextPage } from 'next';
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+/** ページレイアウト定義 */
+import PageLayout from '../src/components/page-layout/pageLayout';
+/** プロバイダ */
+import { VtuberContextProvider } from '../src/context/vtuber-context/vtuber-context-provider';
 
-export default MyApp
+const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
+  return (
+    <VtuberContextProvider>
+      <PageLayout>
+        <Component {...pageProps} />;
+      </PageLayout>
+    </VtuberContextProvider>
+  );
+};
+
+export default MyApp;
