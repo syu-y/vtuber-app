@@ -19,7 +19,7 @@ export interface YoutubeInfo {
   icon: string;
   description: string;
   title: string;
-  startDate: Date;
+  startDate: string;
 }
 
 export class VtuberInfoConvert {
@@ -31,3 +31,26 @@ export class VtuberInfoConvert {
     return JSON.stringify(value);
   }
 }
+
+export const createEmptyVtuberInfo = () => {
+  const emptyVtuberInfo: VtuberInfo = {
+    vtuberId: '',
+    twitterInfo: {
+      screen_name: '',
+      name: '',
+      originalIconUrl: '',
+      description: '',
+      id: '',
+      iconUrl: '',
+      url: '',
+    },
+    youtubeInfo: {
+      icon: '',
+      description: '',
+      title: '',
+      channelId: '',
+      startDate: '',
+    },
+  };
+  return emptyVtuberInfo;
+};
