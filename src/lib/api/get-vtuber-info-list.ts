@@ -1,4 +1,3 @@
-import config from './api.config.json';
 import axios, { AxiosResponse } from 'axios';
 import { VtuberInfo } from '../../data/vtuber-info-type';
 import apiResponse from './type/api.resposne.get.vtuber-info-list.json';
@@ -8,7 +7,7 @@ type ApiResponse = typeof apiResponse;
 const API_SUCCESS: number = 200;
 
 export const getVtuberInfoList = async () => {
-  const url = config.aws.dev.endpoint + config.aws.dev.apiname.getAllVtuberInfo;
+  const url = process.env.NEXT_PUBLIC_API_ENDPOINT + 'getAllVtuberInfo';
   /** 開始ログ */
   console.log(`Start GET`);
 
