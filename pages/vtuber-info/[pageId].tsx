@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Error from 'next/error';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -12,7 +13,13 @@ const vtuberInfoDetailsPage: NextPage = () => {
   const { vList } = useVtuberContext();
   // パスパラメータから値を取得
   const { pageId } = usePathParams<'vtuber', { name: string }>();
-  const listNum = convertPageIdToListNum(pageId);
+
+  let listNum = 0;
+  try {
+    listNum = convertPageIdToListNum(pageId);
+  } catch (err) {
+    return <Error statusCode={500} />;
+  }
 
   return (
     <>
