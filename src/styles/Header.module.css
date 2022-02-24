@@ -1,0 +1,15 @@
+.header {
+  display: -webkit-flex;
+  display: flex;
+  /* -webkit-justify-content: center; */
+  /* justify-content: center; */
+  -webkit-align-items: center;
+  align-items: center;
+  min-height: 10vh;
+  padding: 2rem 0;
+  margin-left: 30px;
+}
+
+.headerText {
+  margin-left: 30px;
+}
