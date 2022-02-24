@@ -1,6 +1,7 @@
+import '../styles/globals.css';
+
 import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
-import '../styles/globals.css';
 
 /** ページレイアウト定義 */
 import PageLayout from '../src/components/page-layout/pageLayout';

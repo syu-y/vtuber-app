@@ -1,16 +1,15 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import { NextPage } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+
 import { URL_YOUTUBE_CHANNEL } from '../../src/app.const';
 import { useVtuberContext } from '../../src/context/vtuber-context/vtuber-context-provider';
-import { useRouter } from 'next/router';
-import { convertPageIdToListNum } from '../../src/utils/vtuber-utils';
 import { usePathParams } from '../../src/utils/get-path';
+import { convertPageIdToListNum } from '../../src/utils/vtuber-utils';
 
 const vtuberInfoDetailsPage: NextPage = () => {
   /** コンテキスト情報の取得 */
-  const { vList, updateVList } = useVtuberContext();
-  const router = useRouter();
+  const { vList } = useVtuberContext();
   // パスパラメータから値を取得
   const { pageId } = usePathParams<'vtuber', { name: string }>();
   const listNum = convertPageIdToListNum(pageId);

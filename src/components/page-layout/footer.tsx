@@ -1,9 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 import styles from '/src/styles/Footer.module.css';
-import { APP_NAME, SITE_TITLE } from '../../app.const';
 
 const Footer = () => {
   return (

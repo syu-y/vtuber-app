@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { URL_YOUTUBE_CHANNEL } from '../../app.const';
 import { VtuberInfo } from '../../data/vtuber-info-type';
-import Router from 'next/router';
 import { createPath } from '../../utils/get-path';
 
 interface Props {
