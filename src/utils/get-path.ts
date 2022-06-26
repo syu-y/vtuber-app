@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useRouter } from 'next/router';
+
 import { Path, PathKeys, Paths } from '../path.const';
 
 type WithoutSlash<T> = T extends `/${infer U}` ? U : never;
