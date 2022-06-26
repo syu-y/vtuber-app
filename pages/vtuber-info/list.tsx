@@ -1,5 +1,6 @@
 import type { InferGetStaticPropsType, NextPage } from 'next';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 import ListElement from '../../src/components/vtuber-Info/list-element';
 import { useVtuberContext } from '../../src/context/vtuber-context/vtuber-context-provider';
@@ -22,9 +23,14 @@ export const getStaticProps = async () => {
 };
 
 const VtuberInfoListPage: NextPage<Props> = ({ vtuberInfoList }) => {
-  /** コンテキスト情報の更新 */
+
+  useEffect(
+    /** コンテキスト情報の更新 */
+    () => updateVList(vtuberInfoList),
+    []
+  );
+
   const { updateVList } = useVtuberContext();
-  updateVList(vtuberInfoList);
 
   return (
     <>

@@ -9,6 +9,10 @@ const Home: NextPage = () => {
         <Link href="/vtuber-info/list">
           <a>Go List Page</a>
         </Link>
+        <hr/>
+        <Link href="/member-type/register">
+          <a>Go MemberType Register Page</a>
+        </Link>
       </h2>
     </>
   );

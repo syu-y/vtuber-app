@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { ReactNode } from 'react';
 
 import styles from '/src/styles/PageLayout.module.css';
 
@@ -6,7 +7,8 @@ import Footer from './footer';
 import Header from './header';
 
 type Props = {
-  children?: React.ReactNode;
+  children?: ReactNode
+  ;
 };
 
 const PageLayout: NextPage = ({ children }: Props) => {
