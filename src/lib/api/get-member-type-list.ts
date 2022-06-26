@@ -1,14 +1,14 @@
 import axios, { AxiosResponse } from 'axios';
 
-import { VtuberInfo } from '../../data/vtuber-info-type';
-import apiResponse from './type/api.resposne.get.vtuber-info-list.json';
+import { MemberType } from '../../data/member-type';
+import apiResponse from './type/api.resposne.get.member-type-list.json';
 
 type ApiResponse = typeof apiResponse;
 
 const API_SUCCESS = 200;
 
-export const getVtuberInfoList = async () => {
-  const url = process.env.NEXT_PUBLIC_API_ENDPOINT + 'getAllVtuberInfo';
+export const getMemberTypeList = async () => {
+  const url = process.env.NEXT_PUBLIC_API_ENDPOINT + 'getMemberTypes';
 
   /** Vtuberの一覧を取得 */
   const response: AxiosResponse<ApiResponse> = await axios.get<ApiResponse>(
@@ -22,7 +22,7 @@ export const getVtuberInfoList = async () => {
   }
 
   /** 型名をつけて返却 */
-  const vtuberInfoList: VtuberInfo[] = data.vtuberInfoList.Items;
+  const memberTypeList: MemberType[] = data.memberTypes.Items;
 
-  return vtuberInfoList;
+  return memberTypeList;
 };

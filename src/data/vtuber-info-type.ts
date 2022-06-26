@@ -1,5 +1,6 @@
 export interface VtuberInfo {
   vtuberId: string;
+  memberTypeCd: number;
   twitterInfo: TwitterInfo;
   youtubeInfo: YoutubeInfo;
 }
@@ -35,6 +36,7 @@ export class VtuberInfoConvert {
 export const createEmptyVtuberInfo = () => {
   const emptyVtuberInfo: VtuberInfo = {
     vtuberId: '',
+    memberTypeCd: 0,
     twitterInfo: {
       screen_name: '',
       name: '',

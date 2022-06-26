@@ -1,0 +1,16 @@
+{
+  "memberTypes": {
+    "Items": [
+      {
+        "memberTypeCd": "001",
+        "memberTypeName": "にじさんじ"
+      },
+      {
+        "memberTypeCd": "002",
+        "memberTypeName": "ホロライブ"
+      }
+    ],
+    "Count": 2,
+    "ScannedCount": 2
+  }
+}
